@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 算數運算子 -->
+    <!--
+     + 加
+     - 減
+     * 乘
+     / 兩數相除，取商
+     % 兩數相除，取餘數
+     -->
+
+    <script>
+        // 計算加、減、乘、除和計算餘數，並顯示在畫面上
+        // <br>跳下一行
+        var a = 5; //宣告變數為a，並同時指派5
+        var b = 3;
+        // 跳出視窗，讓使用者輸入
+        var c = window.prompt('請輸入運算式符號：+, -, *, /, %');
+
+        // 檢查變數c是否為???號
+        // ==（較不嚴謹的比較）=> 等號的左右兩邊的資料類型可以不同
+        // ===（較嚴謹的比較）=> 等號的左右兩邊的資料類型必須相同，比較常用在數值型資料當中
+        if (c === '+') {
+            document.write(`${a}+${b}=${a + b}<br>`);
+        } else if (c === '-') {
+            document.write(`${a}-${b}=${a - b}<br>`);
+        } else if (c === '*') {
+            document.write(`${a}*${b}=${a * b}<br>`);
+        } else if (c === '/') {
+            document.write(`${a}/${b}=${a / b}<br>`);
+        } else if (c === '%') {
+            document.write(`${a}%${b}=${a % b}<br>`);
+        } else {
+            document.write(c + '運算符號錯誤');
+        }
+
+        // document.write(a + '+' + b + '=' + (a + b) + '<br>');
+        // document.write(a + '-' + b + '=' + (a - b) + '<br>');
+        // document.write(a + '*' + b + '=' + (a * b) + '<br>');
+        // document.write(a + '/' + b + '=' + (a / b) + '<br>');
+        // document.write(a + '%' + b + '=' + (a % b) + '<br>');
+
+        // 字串字面值，必須使用反引號「`」包起來，變數使用${變數名稱or運算式}
+        // document.write(`${a}+${b}=${a + b}<br>`);
+        // document.write(`${a}-${b}=${a - b}<br>`);
+        // document.write(`${a}*${b}=${a * b}<br>`);
+        // document.write(`${a}/${b}=${a / b}<br>`);
+        // document.write(`${a}%${b}=${a % b}<br>`);
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //不斷地彈出視窗，直到按了「取消」才結束
+        //布林值boolean(true or false)
+        //計算總共輸入了幾次，ChatGPT寫法
+        // var count=0;
+        // while (true) {
+        //     var keyin = window.prompt('請輸入任意內容');
+        //     if (keyin == null) {
+        //         break; //脫離迴圈到迴圈結尾的下一行
+        //     }
+        //     //訊息視窗
+        //     //window.alert(keyin);
+        //     count++;
+        //     }
+        // window.alert('輸入結束，共輸入了'+count+'次');
+
+        //老師寫的
+        // var count = 0;
+        // while (true) {
+        //     var keyin = window.prompt('請輸入任意內容');
+        //     //按了取消
+        //     if (keyin == null) {
+        //         break; //脫離迴圈到迴圈結尾的下一行
+        //     }
+
+        //     //是否有內容
+        //     //去除空白後，是否有內容
+        //     //trim()為去除資料前後的空白(字與字之間的空白不會去除)
+        //     if (keyin.trim == '') {
+        //         alert('不能沒有內容');
+        //         continue; //略過之後的程式碼，回到迴圈開始的位置
+        //     }
+
+        //     //是否為數字
+        //     if (isNaN(Number(keyin))) {
+        //         alert('ERROR!!非數字內容，請重新輸入')
+        //         continue;
+        //     }
+
+        //     count++;
+        // }
+
+        //訊息視窗alert()
+        //window.alert('輸入結束，共輸入了' + count + '次');
+        //---------------------------------------------------------------------------
+        //100
+        //20
+        //50
+        //------------
+        //輸出
+        //及格人數:1人
+        //不及格人數:2人
+        //總分:170分
+        //總平均:56.67分 (取到小數點後兩位)
+        //--------------------------------------------------------------------------
+        var jg = 0; //預設及格人數為0人
+        var bjg = 0; //預設不及格的人數為0人
+        var tot = 0; //預設總分為0分
+        var avg = 0; //預設總平均為0分
+
+        while (true) {
+            var score = window.prompt('請輸入分數');
+            //按了取消
+            if (score == null) {
+                break; //脫離迴圈到迴圈結尾的下一行
+            }
+
+            //是否有內容
+            //去除空白後，是否有內容
+            //trim()為去除資料前後的空白(字與字之間的空白不會去除)
+            if (score.trim == '') {
+                alert('不能沒有內容');
+                continue; //略過之後的程式碼，回到迴圈開始的位置
+            }
+
+            //是否為數字
+            if (isNaN(Number(score))) {
+                alert('ERROR!!非數字內容，請重新輸入')
+                continue;
+            }
+            
+            score = Number(score); //將輸入的分數轉為數值
+            if (score >= 60) {
+                jg++;  //及格人數統計
+            } else {
+                bjg++; //不及格人數統計
+            }
+            tot = tot + score; //累計計算總分
+        }
+        avg = tot / (jg + bjg); //平均
+        avg = avg.toFixed(2);
+
+        console.log(`及格：${jg}人`);
+        console.log(`不及格：${bjg}人`);
+        console.log(`總分：${tot}分`);
+        console.log(`平均：${avg}分`); //取到小數點後第二位
+
+    </script>
+</body>
+
+</html>

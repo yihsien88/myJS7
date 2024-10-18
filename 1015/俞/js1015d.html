@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="add();">+</button>
+    <button onclick="minus();">-</button>
+    <button onclick="times();">*</button>
+    <button onclick="chu();">/</button>
+    <button onclick="yushu();">取餘數</button>
+
+    <script>
+        var a = 5;
+        var b = 3;
+        // 加法的函式，function 函式名稱(){...}
+        // 按下按鈕，即可顯示其功式
+        function add() {
+            console.log(`${a}+${b}=${a + b}`);
+        }
+
+        // 減法的函式，function 函式名稱(){...}
+        // 按下按鈕，即可顯示其功式
+        function minus() {
+            console.log(`${a}-${b}=${a - b}`);
+        }
+
+        // 乘法的函式，function 函式名稱(){...}
+        // 按下按鈕，即可顯示其功式
+        function times() {
+            console.log(`${a}*${b}=${a * b}`);
+        }
+
+        // 除法的函式，function 函式名稱(){...}
+        // 按下按鈕，即可顯示其功式
+        // 先將前面運算式子打上括號，並將.toFixed(取到小數點後第?位)寫在其後
+        function chu() {
+            // 拆解的寫法
+            var result = a / b;
+            result = result.toFixed(2);
+            console.log(`${a}/${b}=${(a / b).toFixed(2)}`);
+            // or
+            // 一次性的寫法
+            // console.log(`${a}/${b}=${(a / b).toFixed(2)}`);
+
+        }
+
+        // 取餘數的函式，function 函式名稱(){...}
+        // 按下按鈕，即可顯示其功式
+        function yushu() {
+            console.log(`${a}%${b}=${a % b}`);
+        }
+    </script>
+</body>
+
+</html>

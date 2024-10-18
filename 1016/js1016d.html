@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1. 請輸入單價和數量後，算出小計
+        //2. 小計>=1000 (含)以上，運費為0，否則運費為小計的1%
+        //例1 : 單價500，數量2，小計1000，運費為0
+        //例2 : 單價500，數量1，小計500，運費為5
+        //例3 : 單價或數量其中一個為非數值的話，結束
+
+        // 老師寫的
+        // 輸入int，表示輸入值為整數，可加可不加
+        // var price = Number(window.prompt('請輸入單價'));
+        // var qty = Number(window.prompt('請輸入數量'));
+        // var tot = 0;
+        // 邏輯運算子
+        // 交集 &&
+        // 聯集 ||
+        // if (isNaN(price) || isNaN(qty)) {
+        //     console.log('輸入的單價或數量錯誤，請重新輸入');
+        // } else {
+        //     //計算小計
+        //     tot = price * qty;
+        //     //運費預設為0
+        //     var dis = 0;
+        //     if (tot < 1000) {
+        //         dis = tot * 0.01;
+        //     }
+        //     //輸出結果
+        //     console.log('單價 :' + price);
+        //     console.log('數量 :' + qty);
+        //     console.log('小計 :' + tot);
+        //     console.log('運費 :' + (tot+dis)); //或使用反引號寫法 : console.log(`總計 : ${tot+dis}`);
+        // }
+
+        //自己寫的
+        var price = window.prompt('請輸入商品單價');
+        var qan = window.prompt('請輸入購買商品數量');
+        if (isNaN(price) || isNaN(qan)) {
+            console.log('輸入的單價或數量錯誤，請重新輸入');
+        } else if (Number(price * qan) < 1000) {
+            console.log(('因費用低於1000元，需酌收運費' + (Number(price * qan) * 0.01) + '元'+'，總費用為' + (Number(price * qan)+(Number(price * qan) * 0.01)) + '元' ));
+        } else {
+            console.log('總費用為' + (Number(price * qan)) + '元' + '，達免運費標準')
+        }
+    </script>
+</body>
+
+</html>
