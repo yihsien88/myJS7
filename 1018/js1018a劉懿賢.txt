@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //19 劉懿賢 JS1018作業
+        while (true) {
+            var username = window.prompt('請輸入您的帳號（ID）');
+            //按了取消
+            if (username == null) {
+                break; //脫離迴圈
+            }
+
+            var password = window.prompt('請輸入您的密碼（password）');
+            //按了取消
+            if (password == null) {
+                break; //無輸入密碼則結束
+            }
+
+            //去除空白後，是否有內容
+            if (username.trim() === '' || password.trim() === '') {
+                alert('帳密err，請重新輸入！');
+                continue; //略過之後的程式碼，回到迴圈開始的位置
+            } else {
+                //console.log('帳密ok');
+                alert('帳密ok');
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>
