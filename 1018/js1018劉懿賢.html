@@ -18,7 +18,7 @@
             }
 
             var password = window.prompt('請輸入您的密碼（password）');
-            //按了取消
+            //     //按了取消
             if (password == null) {
                 break; //無輸入密碼則結束
             }
@@ -28,12 +28,37 @@
                 alert('帳密err，請重新輸入！');
                 continue; //略過之後的程式碼，回到迴圈開始的位置
             } else {
-                //console.log('帳密ok');
-                alert('帳密ok');
+                if (username == 'admin' && password == '1234') {
+                    alert('帳密正確');
+                } else if (username == 'admin' && password != '1234') {
+                    alert('密碼err');
+                } else {
+                    alert('帳號err');
+                }
             }
-
-
         }
+        //----------------------------------------------------------------------------------------------
+        // //老師寫的
+        // var uid = window.prompt('請輸入帳號');
+        // //使用者按了取消
+        // if (uid == null) {
+        //     console.log('已取消');
+        // } else {
+        //     var upw = window.prompt('請輸入密碼');
+        //     if (upw === null) {
+        //         console.log('密碼已取消');
+        //     } else {
+        //         if (uid == 'admin' && upw == '1234') {
+        //             console.log('帳密正確');
+        //         } else if (uid == 'admin' && upw != '1234') {
+        //             console.log('密碼err');
+        //         } else if (uid != 'admin' && upw == '1234') {
+        //             console.log('帳號err');
+        //         } else {
+        //             console.log('帳密err');
+        //         }
+        //     }
+        // }
     </script>
 </body>
 
