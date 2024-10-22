@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //巢狀迴圈
+        //九九乘法表
+        // for (a = 1; a <= 9; a++) {
+        //     for (var b = 1; b <= 9; b++) {
+        //         if (a * b < 10) {
+        //             document.write(`${a}*${b}=0${a * b}           `);
+        //         } else {
+        //             document.write(`${a}*${b}=${a * b}         `);
+        //         }
+        //     }
+        //     document.write('<br>');
+        // }
+
+        //巢狀迴圈
+        /*
+        *
+        **
+        ***
+        ****
+        *****
+        ****
+        ***
+        **
+        *
+        */
+
+        //外迴圈控制行數
+        for (a = 1; a <= 5; a++) {
+            //內迴圈控制*個數
+            for (var b = 1; b <= a; b++) {
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+
+        for (a = 4; a >= 1; a--) {
+            //內迴圈控制*個數
+            for (var b = 1; b <= a; b++) {
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+    </script>
+</body>
+
+</html>

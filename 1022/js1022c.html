@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1+2+...+10=55
+        // var s = 0;
+        // s = s + 1; //s=s+1=0+1=1
+        // s = s + 2; //s=s+2=1+2=3
+        // s = s + 3; //s=s+3=3+3=6
+
+        // //方法一
+        // var s = 0;
+        // var num = 10;
+        // for (var a = 1; a <= num; a++) {
+        //     s = s + a;
+        // }
+        // console.log(`1+2+...+${num}=${s}`);
+
+        // //方法二
+        // var s = 0;
+        // for (var a = 1; a <= 10; a++) {
+        //     s = s + a;
+        // }
+        // console.log(`1+2+...+${a - 1}=${s}`);
+
+        //1-100中三的倍數
+        var x = 0;
+        for (var y = 1; y <= 100; y++) {
+           if( y % 3===0){
+            x=x+y;
+           }
+        }
+        console.log(`1到${y - 1}中3的倍數加總=${x}`);
+
+        //100-1中三的倍數
+        var x = 0;
+        for (var y = 100; y >= 1; y--) {
+           if( y % 3===0){
+            x=x+y;
+           }
+        }
+        console.log(`100到1中3的倍數加總=${x}`);
+
+
+
+    </script>
+</body>
+
+</html>

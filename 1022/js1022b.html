@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //較為嚴謹
+        //檢查a是否小於10，因為a=11>10，所以while裡面不做
+        /* var a = 11;
+        while (a < 10) {
+            a++; //a=a+1
+        }
+        console.log(`a=${a}`); //a=11
+
+        var b = 11;
+        do {
+            b++; //b=b+1
+        } while (b < 10);
+                console.log(`b=${b}`); //b=12
+        */
+
+        //不斷彈出輸入視窗
+        //方法一
+        while (true) {
+            var score = prompt('請輸入分數');
+            if (score === null) {
+                break;
+            }
+        }
+
+        //方法二
+        var score = '';
+        while (score != null) {
+            var score = prompt('請輸入分數');
+        }
+
+        //方法三
+        do {
+            var score = prompt('請輸入分數');
+            // if (score === null) {
+            //     break;
+            // }
+        } while (score != null);
+
+        //使用for
+        //方法四，很少使用
+        var score = '';
+        for (var a = 1; score != null; a++) {
+            var score = prompt('請輸入分數');
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
