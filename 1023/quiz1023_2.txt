@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    BMI<p id="p2"></p>
+    <script>
+        // 19 劉懿賢
+        function bmi(kg, cm) {
+            return bmi = (kg / ((cm / 100) * (cm / 100))).toFixed(1);
+            // or // return kg/Math.pow(cm/100,2);
+        }
+        // 呼叫BMI，並傳值
+        var your_bmi = bmi(70, 185);
+        if (your_bmi < 18.5) {
+            // BMI<18.5，體重過輕
+            // 取得顯示BMI結果的目標
+            var p2 = document.getElementById('p2');
+            p2.innerHTML = `BMI=${your_bmi} => 體重過輕`;
+        } else if (your_bmi >= 18.5 && your_bmi < 24) {
+            // 18.5<=BMI>24，正常範圍
+            //取得顯示BMI結果的目標
+            var p2 = document.getElementById('p2');
+            p2.innerHTML = `BMI=${your_bmi} => 正常範圍`;
+        } else {
+            // BMI>24，異常範圍
+            var p2 = document.getElementById('p2');
+            p2.innerHTML = `BMI=${your_bmi} =>異常範圍`;
+        }
+    </script>
+
+</body>
+
+</html>

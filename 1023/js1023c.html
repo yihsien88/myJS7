@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="count">1</p>
+    <button onclick="getcount()">+1</button>
+    <button onclick="getcount()">-1</button>
+    <button onclick="getcount('+')">加1</button>
+    <button onclick="getcount('-')">減1</button>
+
+
+    <!-- 使用監聽事件的方式來呼叫函式 -->
+    <button id="btn1">HELLO</button>
+    <script>
+        var btn1 = document.getElementById('btn1');
+        // btn1.addEventListener('click', HELLO);
+        // function HELLO() {
+        //     console.log('HI~');
+        // }
+        // or
+        btn1.addEventListener('click', () => {
+            console.log('HELLO')
+        });
+    </script>
+
+
+
+
+
+
+    <!-- ----------------------------------------------------------------------------------------------------------------------------------- -->
+    <!-- <script>
+        // 共同使用同一個函式，處理+1和-1的動作
+        // 方法一
+        function getcount(op) {
+            var count = document.getElementById('count');
+            if (op === '+') {
+                count.innerHTML = String(Number(count.innerHTML) + 1);
+            } else if (op === '-') {
+                count.innerHTML = String(Number(count.innerHTML) - 1);
+            }
+
+        }
+        //------------------------------------------------------------------------------------
+        // 方法二
+        // +1
+        // 透過Number()將其轉換成數值型態
+        function jia() {
+            var count = document.getElementById('count');
+            // console.log(typeof(count.innerHTML));
+            count.innerHTML = Number(count.innerHTML) + 1;
+        }
+
+        // -1
+        // 透過Number()將其轉換成數值型態
+
+        function jian() {
+            var count = document.getElementById('count');
+            // console.log(typeof(count.innerHTML));
+            count.innerHTML = Number(count.innerHTML) - 1;
+        }
+
+    </script> -->
+</body>
+
+</html>

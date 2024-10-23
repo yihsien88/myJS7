@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- DOM -->
+    <!-- class=類別名稱；ID=ID名稱 -->
+    <p id="p1">我是段落</p>
+    <button onclick="change3()">更換段落內容</button>
+
+    <script>
+        // 一、一般傳統的函式寫法
+        // function change() {
+        //     //取得段落p1
+        //     var p1 = document.getElementById('p1');
+        //     //更改內容
+        //     p1.innerHTML = '內容已更改1';
+        // }
+
+        // 二、匿名函式，把函式變成一個變數
+        // var change2 = function () {
+        //     var p1 = document.getElementById('p1');
+        //     //更改內容
+        //     p1.innerHTML = '內容已更改2';
+        // }
+
+        // 三、箭頭函式
+        var change3 = () => {
+            var p1 = document.getElementById('p1');
+            //更改內容
+            p1.innerHTML = '內容已更改3';
+
+        }
+
+
+
+
+
+
+
+    </script>
+
+    <p id="time"></p>
+    <button onclick="gettime()">取得日期時間</button>
+    <script>
+        function gettime() {
+            //取得顯示日期時間的位置
+            var time = document.getElementById('time');
+            //顯示日期時間在目標上
+            time.innerHTML = new Date().toLocaleString();
+        }
+    </script>
+
+
+
+    <!-- <p id="p2">1</p>
+    <button>+</button>
+    <button>-</button> -->
+
+</body>
+
+</html>

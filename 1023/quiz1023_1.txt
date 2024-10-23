@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1">圓面積</p>
+    BMI<p id="p2"></p>
+    <script>
+        // Q1. 建立一個函式，傳參數r
+        // 輸入半徑，算出圓形面積公式=3.14*半徑*半徑，並在段落一中回傳面積結果。
+        // 半徑=? 圓面積?
+        //老師寫的
+        function area(r) {
+            return 3.14 * r * r;
+        }
+        var p1 = document.getElementById('p1');
+        area(10);
+        var input_r = 5;
+        p1.innerHTML = `半徑=${input_r}，圓面積：${area(input_r)}`;
+
+    </script>
+</body>
+
+</html>

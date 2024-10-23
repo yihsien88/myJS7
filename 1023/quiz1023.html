@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <p id="p1">算出圓面積</p>
+    <button onclick="circleArea()">圓面積等於</button> 
+    <p id="result"></p> -->
+
+    <p id="p1">圓面積</p>
+    BMI<p id="p2"></p>
+    <script>
+        // Q1. 建立一個函式，傳參數r
+        // 輸入半徑，算出圓形面積公式=3.14*半徑*半徑，並在段落一中回傳面積結果。
+        // 半徑=? 圓面積?
+
+        // ChatGPT+我自己寫的
+        // function circleArea() {
+        //     var r = window.prompt("請輸入半徑：");
+        //     r = parseFloat(r);
+        //     if (!isNaN(r)) {
+        //         var area = 3.14 * r * r;
+        //         document.getElementById('result').textContent=(`半徑${r}（3.14*${r}*${r}）的面積為${area}`);
+        //     }else{
+        //         document.getElementById('result').textContent=(`請重新輸入`);
+        //     }
+
+        // }
+
+        // //老師寫的
+        // function area(r) {
+        //     return 3.14 * r * r;
+        //     return(Math.PI * Math.pow(r,2)).toFixed(2);
+        // }
+        // var p1 = document.getElementById('p1');
+        // area(10);
+        // var input_r = 5;
+        // p1.innerHTML = `半徑=${input_r}，圓面積：${area(input_r)}`;
+        // ---------------------------------------------------------------------------------------------------------------------------------------
+        // Q2. 建立一個函式，傳參數身高、體重，算出BMI，並在段落二中回傳BMI結果，
+        // BMI= 體重(kg)/身高(m)^2
+        // 顯示出BMI落在哪個範圍
+
+        // 老師寫的
+        function bmi(kg, cm) {
+            return bmi = (kg / ((cm / 100) * (cm / 100))).toFixed(1);
+            // or // return kg/Math.pow(cm/100,2);
+        }
+        // 呼叫BMI，並傳值
+        var your_bmi = bmi(57, 157);
+        if (your_bmi < 18.5) {
+            // BMI<18.5，體重過輕
+            // 取得顯示BMI結果的目標
+            var p2 = document.getElementById('p2');
+            p2.innerHTML = `BMI=${your_bmi} => 體重過輕`;
+        } else if (your_bmi >= 18.5 && your_bmi < 24) {
+            // 18.5<=BMI>24，正常範圍
+            //取得顯示BMI結果的目標
+            var p2 = document.getElementById('p2');
+            p2.innerHTML = `BMI=${your_bmi} => 正常範圍`;
+        } else {
+            // BMI>24，異常範圍
+            var p2 = document.getElementById('p2');
+            p2.innerHTML = `BMI=${your_bmi} =>異常範圍`;
+        }
+        // ---------------------------------------------------------------------------------------------------------------------------------------
+        // 自己寫的
+        // function bmi(kg, cm) {
+        //     return bmi = kg / ((cm / 100) * (cm / 100));
+        //     // or // return kg/Math.pow(cm/100,2);
+        // }
+        // // 呼叫BMI，並傳值
+        // var p2 = document.getElementById('p2');
+        // var input_kg = 50;
+        // var input_cm = 190;
+        // p2.innerHTML = `體重=${input_kg}公斤，身高=${input_cm}公分，BMI=${bmi(input_kg, input_
+    </script>
+</body>
+
+</html>
