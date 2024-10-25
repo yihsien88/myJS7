@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>猜數字遊戲</p>
+    <p id="ans">亂數值：</p>
+    <hr>
+    <p id="result"></p>
+    <script>
+        //取亂數函式
+        function getRandom(min, max) {
+            //取亂數
+            var a = Math.floor(Math.random() * max) + min;
+            //顯示亂數
+            console.log(`${min}~${max}之間的亂數值為=${a}`);
+            return a;
+        }
+
+        var bingo = getRandom(1, 100);
+        alert(bingo);
+        var ans = document.getElementById('ans');
+        ans.innerHTML = ans.innerHTML + bingo;
+
+        //寫while或do迴圈
+        //寫迴圈彈出輸入視窗，來輸入值
+        //檢查是否跟亂數值一樣
+        while (true) {
+            var input = prompt('請輸入任一數：');
+            if (ans === bingo) {
+                alert('BINGO!!!');
+                break;
+            }
+        }
+    </script>
+</body>
+
+</html>
