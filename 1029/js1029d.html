@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //使用filter方法，找出陣列中的奇數後*2
+        //答案應該=10, 6, 66, 2
+        // //自己寫的
+        // var arr1 = [5, 60, 3, 90, true, '123', 33, 1, 100];
+        // arr1 = arr1.filter((data) => {
+        //     if (typeof data === "number") {
+        //         return data;
+        //     }
+        // })
+        // console.log(arr1);
+        // for (var i = 0; i < arr1.length; i++) {
+        //     if (arr1[i] % 2 == 0) {
+        //         continue;
+        //     } else {
+        //         console.log(arr1[i] * 2); //更新最小值
+        //     }
+        // }
+        //----------------------------------------------------
+        //自己寫的加老師寫的
+        //方法一
+        //使用filter方法，找出陣列中的奇數後*2
+        // //答案應該=10, 6, 66, 2
+        // var arr1 = [5, 60, 3, 90, true, '123', 33, 1, 100];
+        // arr1 = arr1.filter((data) => {
+        //     if (typeof data === "number") {
+        //         return data;
+        //     }
+        // })
+
+        // var str1 = ''; //存放結果的陣列
+        // for (var i = 0; i < arr1.length; i++) {
+        //     if (arr1[i] % 2 === 0) {
+        //         continue;
+        //     } else {
+        //         str1=str1+arr1[i]*2+','; //更新最小值
+        //     }
+        // }
+        // console.log(str1);
+        //----------------------------------------------------
+        //方法二
+        var arr2 = [5, 60, 3, 90, true, '123', 33, 1, 100];
+        var arr2 = [];
+        for (var i = 0; i < arr1.length; i++) {
+            if (typeof arr1[i] === "number") {
+                if (arr1[i] % 2 === 1) {
+                    arr2[i] = arr1[i] * 2;
+                }
+            }
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
