@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // //建立變數給值，程式碼寫起來冗長
+        // var book1 = 'HTML';
+        // var book2 = 'CSS';
+        // var book3 = 'JavaScript';
+
+        //建立一維陣列[]，陣列編號從0開始，0=HTML；1=CSS；2=JavaScript
+        var books = ['HTML', 'CSS', 'JavaScript'];
+        // console.log(books);
+        // //查看books是什麼屬性：物件（object）
+        // console.log(typeof books);
+        //讀取指定編號的陣列值 => 陣列名稱[陣列編號]
+        // console.log(books[1]);
+        // //超過索引範圍，所以回傳undefined
+        // console.log(books[3]);
+
+        //改變陣列中現有的值
+        books[2] = 'JS';
+        console.log(books[2]);
+        books[3] = 'Python';
+        console.log(books[3]); //寫入陣列中不存在的編號是允許的，前提是只能寫在最後面
+
+
+
+    </script>
+</body>
+
+</html>
