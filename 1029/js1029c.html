@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 找出陣列中最大值與最小值
+        var arr1 = [5, 60, 3, 90, true, '123', 33, 1, 100];
+        var max = arr1[5]; //假設陣列中第一個數最大
+        var min = arr1[5]; //假設陣列中第一個數最小
+
+        for (var i = 1; i < arr1.length; i++) {
+            if (typeof arr1[i]==="number") {
+
+                if (arr1[i] > max) {
+                    max = arr1[i]; //更新最大值
+
+                }else if (arr1[i] < min) {
+                    min = arr1[i]; //更新最小值
+                }
+            }
+        }
+        console.log(`陣列中最大值=${max}，陣列中最小值=${min}`);
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

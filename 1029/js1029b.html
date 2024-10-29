@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //顯示陣列中字串(string)的值 => typeof
+        var arr1 = [1, 2, 3, 4, 5, '12ab345',100,'字串'];
+        // console.log(arr1);
+        // console.log(typeof arr1);
+
+        // // 我寫的
+        // //方法一、使用for
+        // for (var i = 0; i < arr1.length; i++) {
+        //     document.write(arr1[i] + ': ' + typeof arr1[i] + '<br>');
+        // }
+        // document.write('<hr>');
+
+        // //方法二、 for of
+        // for (var a of arr1) {
+        //     document.write(a + ': ' + typeof a);
+        //     document.write('<br>');
+        // }
+        // document.write('<hr>');
+
+        // //方法三、forEach
+        // arr1.forEach((b) => {
+        //     document.write(b + ': ' + typeof b);
+        //     document.write('<br>');
+        // });
+        // document.write('<hr>');
+
+        // //方法四、map
+        // arr1.map((c) => {
+        //     document.write(c + ': ' + typeof c);
+        //     document.write('<br>');
+        // })
+        //-----------------------------------------------------------------------
+        // 老師寫的
+        // 方法一、for
+        for (var i = 0; i < arr1.length; i++) {
+            if (typeof arr1[i] === 'string') {
+                console.log(arr1[i]);
+            }
+        }
+
+        // 方法二、for of
+        for (var a of arr1) {
+            if (typeof a === 'string') {
+                console.log(a);
+            }
+
+        }
+
+        // 方法三、forEach
+        arr1.forEach((b) => {
+            if (typeof b === 'string') {
+                console.log(b);
+            }
+        });
+
+        //方法四、map
+        arr1.map((c) => {
+            if(typeof c==='string'){
+                console.log(c);
+            }
+        });
+    </script>
+</body>
+
+</html>
