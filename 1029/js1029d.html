@@ -49,16 +49,41 @@
         // console.log(str1);
         //----------------------------------------------------
         //方法二
-        var arr2 = [5, 60, 3, 90, true, '123', 33, 1, 100];
-        var arr2 = [];
-        for (var i = 0; i < arr1.length; i++) {
-            if (typeof arr1[i] === "number") {
-                if (arr1[i] % 2 === 1) {
-                    arr2[i] = arr1[i] * 2;
-                }
-            }
+        // var arr1 = [5, 60, 3, 90, true, '123', 33, 1, 100];
+        // var arr2 = [];
+        // for (var i = 0; i < arr1.length; i++) {
+        //     if (typeof arr1[i] === "number") {
+        //         if (arr1[i] % 2 === 1) {
+        //             arr2[i] = arr1[i] * 2;
+        //         }
+        //     }
+        // }
+        // console.log(arr2);
+        //----------------------------------------------------
+        //方法二作法更新(2024/10/30)
+        // var arr1 = [5, 60, 3, 90, true, '123', 33, 1, 100];
+        // var str1 = ''; //存放結果的陣列
+        // for (var i = 0; i < arr1.length; i++) {
+        //     if (typeof arr1[i] === "number" && arr1[i] % 2 === 1) {
+        //         str1 = str1 + arr1[i] * 2 + ',';
+        //     }
+        // }
+        // console.log(str1);
 
-
+        // //方法三、找出陣列中的奇數值
+        // var arr1 = [5, 60, 3, 90, true, '123', 33, 1, 100];
+        // var odds = arr1.filter((a) => {
+        //     if (typeof a === "number" && a % 2 === 1) {
+        //         return true;
+        //     }
+        // });
+        // console.log(odds);
+        // odds = odds.map((b) => {
+        //     return b * 2;
+        // })
+        // console.log(odds);
+        //---------------------------------------------------------------------------------------------
+        
 
 
 
