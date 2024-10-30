@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr1 = [1, 5, 100, 5, 3, 30, 5, 90];
+        console.log(arr1);
+        // console.log(`第一個5的位置=${arr1.indexOf(5)}`);
+        // console.log(`最後一個5的位置=${arr1.lastIndexOf(5)}`);
+        // console.log(`搜尋一個沒有在陣列中的數都會呈現(-1)=${arr1.lastIndexOf(88)}`);
+        //找出5的位置
+        if (arr1.includes(5)){
+            arr1.map((n1,index)=>{
+                if(n1===5){
+                    console.log(index);
+                }
+            });
+        }
+
+        /*
+        //新增陣列值到最後面
+        console.log(`新增陣列值最後面前：${arr1}`);
+        arr1.push(88);
+        console.log(`新增陣列值最後面後：${arr1}`);
+
+        //新增陣列值到最前面
+        arr1.unshift(8);
+        console.log(`新增陣列值到最前面：${arr1}`);
+        arr1.unshift('Hello');
+        console.log(`新增字串到最前面：${arr1}`);
+        arr1.unshift('a','b','c');
+        console.log(`新增字串陣列到最前面：${arr1}`);
+        */
+
+        /*
+        //查看陣列中最後一個值，不會被移除
+        console.log(arr1[arr1.length-1]);
+        console.log(arr1);
+        //pop()=>取出陣列最後一個值，並且移除
+        console.log(arr1.pop());
+        console.log(arr1);
+
+        //查看陣列中第一個值，不會被移除
+        console.log(arr1[0]);
+        //shift()=>取出陣列第一個值，並且移除
+        console.log(arr1.shift());
+        console.log(arr1);
+        */
+
+        /*
+        console.log(`排序前：${arr1}`);
+        // 陣列排序
+        // 升冪
+        arr1.sort((n1, n2) => {
+            return n1 - n2;
+        });
+        console.log(`排序後（遞增）：${arr1}`);
+        // 降冪方法1
+        arr1.sort((n1, n2) => {
+            return n2 - n1;
+        });
+        console.log(`排序後（遞減）：${arr1}`);
+        // 將最後導出的排序反轉過來
+        console.log(`反轉後的陣列${arr1.reverse()}`);
+        */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

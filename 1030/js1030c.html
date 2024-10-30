@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="daletou()">大樂透</button>
+    <button onclick="weilicai()">威力彩</button>
+    <button onclick="jincai539()">今彩539</button>
+    <script>
+        //19 劉懿賢
+        //-----<大樂透>-----
+        //1-49產生6個號碼（不重複）
+        //1-49產生1個特別號（可以重複）
+            var r1 = (max, min) => {
+                return Math.round(Math.random() * (max - min) + min)
+            }; //範圍內隨機整數的公式
+            var arr1 = []; //陣列一用來產生六個隨機數字
+            var random = r1(1, 49);
+            //在1-49之間產生6個隨機數字，
+            for (i = 1; i <= 6; i++) {
+                arr1.push(random);
+                //如果陣列當中數字有重複就再重跑一次
+                while (arr1.includes(random)) {
+                    random = r1(1, 49);
+                }
+            }
+            //將號碼顯示在螢幕上，並換行
+            document.write(`大樂透<br>`);
+            document.write(`六個號碼：${arr1}<br>`);
+            //因為特表號碼只有一個數字，所以不用判斷和多寫一個陣列
+            document.write(`特別號碼：${r1(1, 49)}`);
+    
+        //老師做的
+        // var lottery = [];
+        // for (var i = 0; i < 6; i++) {
+        //     //產生亂數
+        //     var no = Math.floor(Math.random() * 49) + 1; //如果不加1的話，就有可能會產生0，因此要再加1
+        //     if (lottery.includes(no)) {
+        //         //有找到=重複
+        //         i = i - 1; //or i--，取消原本已經存在的位置
+        //         continue;
+        //     } else {
+        //         //沒找到=沒有重複
+        //         lottery[i] = no;
+        //     }
+
+        // }
+        // console.log(lottery);
+        // console.log(`第一區：${lottery}`);
+
+        // while (true) {
+        //     var s_no = Math.floor(Math.random() * 49) + 1; //如果不加1的話，就有可能會產生0，因此要再加1
+        //     if (lottery.includes(s_no)) {
+        //         //有找到=重複
+        //         continue;
+        //     } else {
+        //         //沒找到=沒有重複
+        //         lottery.push(s_no);
+        //         break;
+        //     }
+        // }
+        // console.log(`特別號：${lottery[lottery.length-1]}`);
+        // console.log(`特別號：${s_no}`);
+
+    </script>
+</body>
+
+</html>

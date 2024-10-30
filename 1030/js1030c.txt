@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //19 劉懿賢
+        //亂數產生大樂透號碼
+        //1-49產生6個號碼（不重複）
+        //1-49產生1個特別號（可以重複）
+        var r = (max, min) => {
+            return Math.round(Math.random() * (max - min) + min)
+        }; //範圍內隨機整數的公式
+        var arr1 = []; //陣列一用來產生六個隨機數字
+        var random = r(1, 49);
+        //在1-49之間產生6個隨機數字，
+        for (i = 1; i <= 6; i++) {
+            arr1.push(random);
+            //如果陣列當中數字有重複就再重跑一次
+            while (arr1.includes(random)) {
+                random = r(1, 49);
+            }
+        }
+        //將號碼顯示在螢幕上，並換行
+        document.write(`六個號碼：${arr1}<br>`);
+        //因為特表號碼只有一個數字，所以不用判斷和多寫一個陣列
+        document.write(`特別號碼：${r(1, 49)}`);
+
+
+    </script>
+</body>
+
+</html>

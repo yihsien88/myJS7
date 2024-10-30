@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="daletou()">大樂透</button>
+    <button onclick="weilicai()">威力彩</button>
+    <button onclick="jincai539()">今彩539</button>
+    <script>
+        //19 劉懿賢
+        //-----<大樂透>-----
+        //1-49產生6個號碼（不重複）
+        //1-49產生1個特別號（可以重複）
+        function daletou() {
+            var r1 = (max, min) => {
+                return Math.floor(Math.random() * (max - min) + min)
+            }; //範圍內隨機整數的公式
+            var arr1 = []; //陣列一用來產生六個隨機數字
+            var random = r1(1, 49);
+            //在1-49之間產生6個隨機數字，
+            while (arr1.length < 6) {
+                var random = r1(1, 49);
+                if (!arr1.includes(random)) {
+                    arr1.push(random);
+                }
+            }
+            var special_num;
+            do {
+                special_num = r1(1, 49);
+            } while (arr1.includes(special_num));
+            //將號碼顯示在螢幕上，並換行
+            document.write(`大樂透<br>`);
+            document.write(`六個號碼：${arr1}<br>`);
+            //因為特表號碼只有一個數字，所以不用判斷和多寫一個陣列
+            document.write(`特別號碼：${r1(1, 49)}`);
+        }
+
+        //-----<威力彩>-----
+        //1-38產生6個號碼（不重複）
+        //1-8產生1個特別號（可以重複）
+        function weilicai() {
+            var r2 = (max, min) => {
+                return Math.floor(Math.random() * (max - min) + min)
+            }; //範圍內隨機整數的公式
+            var arr2 = []; //陣列一用來產生六個隨機數字
+            while (arr2.length < 6) {
+                var random = r2(1, 38);
+                if (!arr2.includes(random)) {
+                    arr2.push(random);
+                }
+            }
+            var special_num;
+            do {
+                special_num = r2(1, 8);
+            } while (arr2.includes(special_num));
+            //將號碼顯示在螢幕上，並換行
+            document.write(`威力彩<br>`);
+            document.write(`六個號碼：${arr2}<br>`);
+            //因為特表號碼只有一個數字，所以不用判斷和多寫一個陣列
+            document.write(`特別號碼：${special_num}`);
+        }
+
+        //-----<今彩539>-----
+        //1-39產生6個號碼（不重複）
+        //沒有特別號
+        function jincai539() {
+            var r3 = (max, min) => {
+                return Math.floor(Math.random() * (max - min) + min)
+            }; //範圍內隨機整數的公式
+            var arr3 = []; //陣列一用來產生六個隨機數字
+            var random = r3(1, 39);
+            //在1-49之間產生6個隨機數字，
+            while (arr3.length < 5) {
+                var random = r3(1, 39);
+                if (!arr3.includes(random)) {
+                    arr3.push(random);
+                }
+            }
+            //將號碼顯示在螢幕上，並換行
+            document.write(`今彩539<br>`);
+            document.write(`五個號碼：${arr3}<br>`);
+        }
+    </script>
+</body>
+
+</html>
