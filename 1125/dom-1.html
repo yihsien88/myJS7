@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>文件物件模型 - DOM</h1>
+    <hr>
+    <form>
+        請選擇選修的科目：
+        <!-- 有了共同的name，就可以把這三項做成陣列 -->
+        <input name="subjects" type="checkbox" value="HTML">HTML
+        <input name="subjects" type="checkbox" value="CSS">CSS
+        <input name="subjects" type="checkbox" value="JavaScript">JavaScript
+        <!-- 綁定事件 -->
+        <input type="button" onclick="getSubjects()" value="送出">
+        <!-- 監陣事件 -->
+        <input id="btn1" type="button" value="送出2">
+
+    </form>
+    <script>
+        let subjects = document.getElementsByName('subjects');
+        // 顯示全部的核取方塊的內容
+        for (let i = 0; i < subjects.length; i++) {
+            console.log(subjects[i].value);
+        }
+
+        function getSubjects() {
+            // 顯示被選取(checked)的核取方塊的內容
+            for (let i = 0; i < subjects.length; i++) {
+                if (subjects[i].checked) {
+                    console.log(subjects[i].value);
+                }
+            }
+        }
+
+        // 監陣事件
+        // addEventListener('事件名稱',事件發生時的程式處理)
+        // 事件發生時的程式處理1=>呼叫不加小括號的函式名稱
+        // 事件發生時的程式處理2=>使用箭頭函式，直接撰寫
+        document.getElementById('btn1').addEventListener('click', () => {
+            for (let i = 0; i < subjects.length; i++) {
+                if (subjects[i].checked) {
+                    console.log(subjects[i].value);
+                }
+            }
+        });
+
+
+
+    </script>
+</body>
+
+</html>

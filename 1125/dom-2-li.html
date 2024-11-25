@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li id="one" class="subjects">HTML</li>
+        <li id="two" class="subjects">CSS</li>
+        <li id="three" class="subjects">JavaScript</li>
+    </ul>
+    <ul>
+        <li class="drinks">美式</li>
+        <li class="drinks">拿鐵</li>
+        <li class="drinks">義式</li>
+    </ul>
+    <script>
+        // 取得HTML標籤內容
+        // let subjects = document.getElementsByTagName('li');
+        // 使用類別名稱取得標籤內容
+        // let subjects = document.getElementsByClassName('drinks');
+
+        let subjects = document.querySelectorAll('.subjects');
+        // console.log(subjects);
+        for (let i = 0; i < subjects.length; i++) {
+            console.log(subjects[i].textContent);
+        }
+
+        // 使用id名稱取得標籤內容
+        // let subjects=document.getElementById('2').textContent;
+        // let subjects = document.querySelector('#two').textContent;
+        // console.log(subjects);
+
+        // querySelector=> 用在唯一性，例如id
+        // querySelecotrAll=>用在非唯一性，例如class、HTML標籤
+    </script>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

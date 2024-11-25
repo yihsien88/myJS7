@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>取得元素屬性值</h1>
+    <hr>
+    <a id="engine" href="https://www.google.com.tw/?hl=zh_TW">搜尋引擎</a>
+    <button id="btnEngine">更換搜尋引擎</button>
+
+    <script>
+        // // 取得超連結元素id
+        // let engine = document.getElementById('engine');
+        // // 檢查是否有超連結屬性
+        // if (engine.hasAttribute('href')) {
+        //     console.log('yes');
+        // } else {
+        //     console.log('no');
+        //     engine.setAttribute('href', 'https://www.google.com.tw/?hl=zh_TW'
+        //         console.log(engine.href);
+        //     )
+        // }
+
+
+
+        // console.log(engine);
+        // 取得超連結屬性
+        // console.log(engine.href);
+
+        // 呼叫函式名稱
+        function getEngine() {
+            // 更換超連結屬性值
+            engine.href = "https://www.baidu.com/";
+            console.log(engine.href);
+        }
+        document.querySelector('#btnEngine').addEventListener('click', getEngine);
+
+        // 使用箭頭函式
+        document.querySelector('#btnEngine').addEventListener('click', () => {
+            // 更換超連結屬性值
+            engine.href = "https://www.baidu.com/";
+            console.log(engine.href);
+        });
+    </script>
+
+
+</body>
+
+</html>
