@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .errColor {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        <label for="score">分數=</label>
+        <input type="number" id="score" maxlength="3" size="5">
+        <span id="msg"></span>
+    </p>
+    <p><input type="button" value="成績確認" id="btn1"></p>
+    </form>
+    <script>
+        let msg = document.getElementById('msg');
+        let score = document.getElementById('score');
+        let btn1 = document.getElementById('btn1');
+        btn1.addEventListener('click', () => {
+            if (score.value === "") {
+                msg.textContent = "分數不能空白";
+                msg.className = "errColor";
+            } else if (score.value >= 60 && score.value <= 100 ) {
+                msg.textContent = "及格";
+                msg.style.color="blue";
+            } else if (score.value >= 0 && score.value < 60) {
+                msg.textContent = "不及格";
+                msg.style.color='red';
+            } else {
+                msg.textContent = "輸入err";
+                msg.className = "errColor";
+            }
+        })
+    </script>
+</body>
+
+</html>
